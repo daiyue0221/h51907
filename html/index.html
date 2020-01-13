@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/donghua.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="animated slideInLeft">
+<!--头部-->
+<div class="head w cl">
+    <h1>
+        <a href="">
+            <img src="../images/1.png" alt="">
+        </a>
+    </h1>
+    <ul>
+        <li><a href="xwdt.html">新闻动态</a></li>
+        <li><a href="sjtd.html">设计团队</a></li>
+        <li><a href="zpzs.html">产品展示</a></li>
+        <li><a href="gywm.html">关于我们</a></li>
+        <li><a href="index.html">首页</a></li>
+    </ul>
+</div>
+<!--轮播-->
+<div id="img" class="carousel">
+    <div class="carousel_img">
+        <img class="active" src="../images/1.jpg" alt="">
+        <img src="../images/2.jpg" alt="">
+        <img src="../images/3.jpg" alt="">
+    </div>
+    <img style="opacity: 0;" src="../images/3.jpg" alt="">
+    <ul>
+        <li cl="0" class="active"></li>
+        <li cl="1"></li>
+        <li cl="2"></li>
+    </ul>
+    <div class="txt zoomInDown">
+        <h5>FINE CLOTHING</h5>
+        <h6>感受内心的渴望 穿出自己的美</h6>
+        <p>GIFH HT GJSHOPZ JPAE HGCJUF HUETMD TRHG ADJLBVC FHKS SRHKI FGJLMNT EDFHL</p>
+    </div>
+</div>
+<!--关于我们-->
+<div class="about w cl">
+    <div class="lf">
+        <h5>关于我们</h5>
+        <h6>ABOUT US</h6>
+        <P>是一家集设计、生产、销售于一体的全国著名女装股份制企业。在杭州下城区天堂经济开 发区、 下城区永华街和萧山国家经济开发区拥有近二十万多平米生产办公基地公司现有员工50 00人左右,年生产、销售服装500多万件,销售业绩以每年40%的速度飞速增长。经过多年发 展，公司已成为浙江女装行业的领军企业。</P>
+        <P>以打造中国第一-淑女品牌为己任，全動倡导和推动淑女文化,将中国女性更优雅更甜美更 淑女的品牌使命融入现代女性的生活中,为怀有淑女梦想的女孩搭建甜美动人、端庄优雅、时 尚俏丽的精致舞台。</P>
+        <P>定位于追求优雅含蓄、融入温柔婉约、崇尚完美精致生活的都市白领女性,她们追求品质 与时尚但绝不随波逐流,习惯被人关注和宠爱、她们的优雅气质让她们展现出属于玖姿女性独 有的魅力风尚JZ玖姿传承意大利风情,采用精美绝伦的立体剪裁,花型组合与材质拼接,并选 用欧洲当季最流行的高级面料, 将意大利时装的精致优雅和浪漫热情完美融合在-起。完美缔 造出中国女性优雅、知性、时尚的服饰经典。</P>
+        <P>秉承“塑形、优雅、大气、经典、时尚”的设计理念,运用优质上等的面料、精致的细节 装饰、优雅的色彩和图案,加上时尚的设计和巧妙的剪裁,勾勒出女性的线条美感,妆点现代 都市女性的多彩生活。美融合在-起。</P>
+        <h4><a href="gywm.html">READING</a></h4>
+    </div>
+    <div class="rt">
+        <div class="bk">
+            <img src="../images/3.png" alt="">
+            <p></p>
+        </div>
+    </div>
+</div>
+<!--产品展示-->
+<div class="cpzs">
+    <div class="ggtitle">
+        <p>产品展示</p>
+        <p>PRODUCT DISPLAY</p>
+    </div>
+    <ul id="ul2" class="style w cl">
+    </ul>
+    <div class="ggfoot">
+        <p><a href="zpzs.html">READING</a></p>
+    </div>
+</div>
+<div class="ggtitle">
+    <p>设计团队</p>
+    <p>DESIGN TEAM</p>
+</div>
+<ul id="ul3" class="sjtd w cl">
+</ul>
+<div class="banner">
+    <p>EIMICHS</p>
+    <p>SDGH ASDYFU ZXDUGLZ DGF</p>
+</div>
+<div class="ggtitle">
+    <p>新闻动态</p>
+    <p>NEWS INFORMATION</p>
+</div>
+<ul id="ull" class="xwdt w cl">    
+</ul>
+<div class="ggfoot">
+    <p><a href="xwdt.html">READING</a></p>
+</div>
+<div class="foot">
+    COPYRIGHT 02014 GIRDEAR ALL RIGHTS RESERVED版权所有:浙江印象实业股份有限公司浙ICP备15046969
+</div>
+<div id="hbdh"></div>
+<!-- <script src="../js/sbdh.js"></script> -->
+<script>
+            var xhr=getXhr();
+			xhr.open("GET","../服务器/fwq.php?hide=1");
+            xhr.send(null);
+            xhr.onreadystatechange=function(){
+            if(xhr.status==200 && xhr.readyState==4){
+                let arrs=eval(xhr.responseText);
+                for(let i=0;i<arrs.length;i++){
+                    let lis=document.createElement("li");
+                    let ldiv=document.createElement("div");
+                    ldiv.className="left";
+                    let rdiv=document.createElement("div");
+                    rdiv.className="right";
+                    let lspan1=document.createElement("span");
+                    let lspan2=document.createElement("span");
+                    let rh6=document.createElement("h6");
+                    let rp=document.createElement("p");
+                        lspan1.innerHTML=arrs[i][1].slice(5,);
+                        lspan2.innerHTML=arrs[i][1].slice(0,4);
+                        rh6.innerHTML=arrs[i][2];
+                        rp.innerHTML=arrs[i][3];
+                        rp.className="es2";
+                        ldiv.appendChild(lspan1);
+                        ldiv.appendChild(lspan2);
+                        lis.appendChild(ldiv);
+                        rdiv.appendChild(rh6);
+                        rdiv.appendChild(rp);
+                        lis.appendChild(rdiv);
+                        ull.appendChild(lis);
+                }
+            }
+        }
+            var xhr1=getXhr();
+            xhr1.open("GET","../服务器/fwq.php?hide=2");
+            xhr1.send(null);
+            xhr1.onreadystatechange=function(){
+            if(xhr1.status==200 && xhr1.readyState==4){
+                let arrs1=eval(xhr1.responseText);
+                for(let i=0;i<arrs1.length;i++){
+                        let lis1=document.createElement("li");
+                        let img1=document.createElement("img");
+                        img1.src=arrs1[i][1];
+                        let div1=document.createElement("div");
+                        let p1=document.createElement("p");
+                        p1.innerHTML=arrs1[i][2];
+                        let p2=document.createElement("p");
+                        p2.innerHTML="舍弃了简单的色调堆砌，而是通";
+                        let p3=document.createElement("p"); 
+                        p3.innerHTML="过特别的明暗对比来彰显品位。"; 
+                        if(i==0||i==1){
+                            div1.className="bkk";
+                        }else if(i==2||i==3){
+                            div1.className="bkk bkf";
+                            img1.className="bkfi";
+                        }
+                        div1.appendChild(p1);
+                        div1.appendChild(p2);
+                        div1.appendChild(p3);
+                        lis1.appendChild(img1);
+                        lis1.appendChild(div1);
+                        ul2.appendChild(lis1);       
+                }    
+            }
+	    }   
+            
+
+        var xhr2=getXhr();
+            xhr2.open("GET","../服务器/fwq.php?hide=3");
+            xhr2.send(null);
+            xhr2.onreadystatechange=function(){
+            if(xhr2.status==200 && xhr2.readyState==4){
+                let arrs2=eval(xhr2.responseText);
+                for(let i=0;i<arrs2.length;i++){
+                   let lis2=document.createElement("li");
+                   let img2=document.createElement("img");
+                   let span2=document.createElement("span");
+                   let p2=document.createElement("p");
+                   img2.src=arrs2[i][1];
+                   span2.innerHTML=arrs2[i][2];
+                   p2.innerHTML=arrs2[i][3];
+                   lis2.appendChild(img2);
+                   lis2.appendChild(span2);
+                   lis2.appendChild(p2);
+                   ul3.appendChild(lis2);
+                }    
+            }
+	    }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function getXhr(){
+                var xhr;
+                if(XMLHttpRequest){//主流
+                    xhr=new XMLHttpRequest();
+                }else{
+                    xhr=new ActiveXObject("Microsoft.XMLHttp")
+                }
+                return xhr;
+            }
+
+</script>
+<script src="../js/index.js"></script>
+</body>
+</html>

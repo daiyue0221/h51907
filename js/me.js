@@ -1,0 +1,1 @@
+"use strict";var a=1,b=a,arr=[321,3,21,41,4,123,21,5,43,645,7,65,76,456,2,4,13,412,312];arr.sort(function(r,a){return r-a});
